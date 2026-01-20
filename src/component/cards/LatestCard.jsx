@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const LatestCard = ({ dish }) => {
@@ -20,11 +21,15 @@ const LatestCard = ({ dish }) => {
         {/* Content */}
         <div className="p-5 text-center">
           <h3 className="text-lg font-semibold">{dish.productName}</h3>
-          <p className="text-orange-600 font-bold mt-2">$ {dish.productPrice}</p>
+          <p className="text-orange-600 font-bold mt-2">
+            $ {dish.productPrice}
+          </p>
 
-          <button className="mt-4 w-full py-2 rounded-full bg-linear-to-r from-orange-500 to-red-600 text-white font-medium hover:opacity-90 transition">
-            Order Now
-          </button>
+          <Link href={`/menu/${dish._id}`}>
+            <button className="mt-4 w-full py-2 rounded-full bg-linear-to-r from-orange-500 to-red-600 text-white font-medium hover:opacity-90 transition">
+              Details
+            </button>
+          </Link>
         </div>
       </div>
     </div>
