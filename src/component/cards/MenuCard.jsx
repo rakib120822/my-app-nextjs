@@ -37,7 +37,7 @@ export default function MenuCard({ product }) {
         </div>
 
         <Link href={`/menu/${product._id}`}>
-          <button className="btn-primary mt-15 w-full">Details</button>
+          <button className="btn-primary mt-5 w-full">Details</button>
         </Link>
       </div>
     </div>

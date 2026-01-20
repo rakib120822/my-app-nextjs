@@ -2,9 +2,15 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
+  const handleOnClick = () => {
+    router.push("/login");
+  };
 
   return (
     <nav className="bg-white shadow-md sticky top-0 w-full z-50">
@@ -26,6 +32,9 @@ export default function Navbar() {
             <Link href="/menu" className="hover:text-orange-500">
               Menu
             </Link>
+            <Link href="/addItem" className="hover:text-orange-500">
+              Add Item
+            </Link>
             <Link href="/about" className="hover:text-orange-500">
               About
             </Link>
@@ -36,8 +45,11 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden md:block">
-            <button className="px-5 py-2 rounded-full bg-linear-to-r from-orange-500 to-red-600 text-white font-medium hover:opacity-90">
-              Order Now
+            <button
+              onClick={handleOnClick}
+              className="px-5 py-2 rounded-full bg-linear-to-r from-orange-500 to-red-600 text-white font-medium hover:opacity-90"
+            >
+              Login
             </button>
           </div>
 
@@ -89,8 +101,11 @@ export default function Navbar() {
               Contact
             </Link>
 
-            <button className="mt-4 py-2 rounded-full bg-linear-to-r from-orange-500 to-red-600 text-white">
-              Order Now
+            <button
+              onClick={handleOnClick}
+              className="mt-4 py-2 rounded-full bg-linear-to-r from-orange-500 to-red-600 text-white"
+            >
+              Login
             </button>
           </div>
         </div>
