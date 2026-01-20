@@ -1,4 +1,5 @@
 import Image from "next/image";
+import OrderBtn from "./button/OrderBtn";
 
 const specials = [
   {
@@ -65,9 +66,7 @@ export default function Popular() {
               <div className="p-5 text-center">
                 <h3 className="text-lg font-semibold">{dish.name}</h3>
                 <p className="text-orange-600 font-bold mt-2">{dish.price}</p>
-                <button className="mt-4 w-full py-2 rounded-full bg-linear-to-r from-orange-500 to-red-600 text-white font-medium hover:opacity-90 transition">
-                  Order Now
-                </button>
+                <OrderBtn />
               </div>
             </div>
           ))}
