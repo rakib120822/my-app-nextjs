@@ -50,7 +50,7 @@ export default function AddProductForm() {
     };
 
     try {
-      const res = await fetch("http://localhost:8080/product", {
+      const res = await fetch("https://next-js-server-project.vercel.app/product", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

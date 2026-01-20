@@ -2,7 +2,7 @@ import MenuCard from "@/component/cards/MenuCard";
 import React from "react";
 
 const Menu = async () => {
-  const data = await fetch("http://localhost:8080/product");
+  const data = await fetch("https://next-js-server-project.vercel.app/product");
   const foods = await data.json();
   console.log({ foods });
   return (

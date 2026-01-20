@@ -1,7 +1,7 @@
 import LatestCard from "../cards/LatestCard";
 
 export default async function LatestSection() {
-  const data = await fetch("http://localhost:8080/latest");
+  const data = await fetch("https://next-js-server-project.vercel.app/latest");
   const foods = await data.json();
 
   return (

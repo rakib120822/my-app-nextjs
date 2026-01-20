@@ -27,7 +27,7 @@ import { ToastContainer } from "react-toastify";
 export default async function DetailPage({ params }) {
   const { detailId } = await params;
   console.log(detailId);
-    const data = await fetch(`http://localhost:8080/product/${detailId}`);
+    const data = await fetch(`https://next-js-server-project.vercel.app/product/${detailId}`);
     const product = await data.json();
 
   return (
