@@ -36,7 +36,7 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden md:block">
-            <button className="px-5 py-2 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-white font-medium hover:opacity-90">
+            <button className="px-5 py-2 rounded-full bg-linear-to-r from-orange-500 to-red-600 text-white font-medium hover:opacity-90">
               Order Now
             </button>
           </div>

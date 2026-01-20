@@ -5,10 +5,7 @@ import React from "react";
 const LatestCard = ({ dish }) => {
   return (
     <div>
-      <div
-        key={dish.id}
-        className="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden group"
-      >
+      <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden group">
         {/* Image */}
         <div className="h-56 overflow-hidden">
           <Image
